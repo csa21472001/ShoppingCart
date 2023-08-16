@@ -2,6 +2,7 @@ package sky.pro.Shopping.Project.service;
 
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
 
 @Service
@@ -13,12 +14,12 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public void add(List<Integer> goods) {
+    public void add(HashSet<Integer> goods) {
         goods.forEach(cart::add);
     }
 
     @Override
-    public List<Integer> get() {
+    public HashSet<Integer> get() {
         return cart.getGoods();
     }
 

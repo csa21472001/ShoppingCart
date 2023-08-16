@@ -5,23 +5,24 @@ import org.springframework.web.context.annotation.SessionScope;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 @Component
 @SessionScope
 public class Cart {
 
-    private final List<Integer> goods;
+    private final HashSet<Integer> goods;
 
     public Cart() {
-        this.goods = new ArrayList<>();
+        this.goods = new HashSet<>();
     }
 
     public void add(Integer good) {
         goods.add(good);
     }
 
-    public List<Integer> getGoods() {
+    public HashSet<Integer> getGoods() {
         return goods;
     }
 

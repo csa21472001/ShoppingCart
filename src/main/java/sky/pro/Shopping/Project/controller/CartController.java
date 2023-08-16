@@ -13,13 +13,15 @@ public class CartController {
     public CartController(CartService cartService) {
         this.cartService = cartService;
     }
+
     @GetMapping("/add")
-    public String add(@RequestParam List<Integer> goods ) {
+    public String add(@RequestParam List<Integer> goods) {
         cartService.add(goods);
         return "Goods added!";
     }
+
     @GetMapping("/get")
-    public List<Integer>get(){
+    public List<Integer> get() {
         return cartService.get();
     }
 }

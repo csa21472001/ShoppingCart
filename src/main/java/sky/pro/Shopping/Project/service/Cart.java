@@ -1,7 +1,6 @@
 package sky.pro.Shopping.Project.service;
 
 import org.springframework.stereotype.Component;
-import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.SessionScope;
 
 
